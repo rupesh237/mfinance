@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block breadcrumb %}
+<li>Transactions Page</li>
+{% endblock %}
+{% block stage %}
+<div class="banner">
+  <div class="banner_content">
+    <h3>Transactions</h3>
+    <div class="select_banner row">
+      <div class="col-5">
+        <a href="{% url 'micro_admin:receiptslist' %}" class="pull-right branch">Receipts</a>
+        {% comment %} <button type="button" class="pull-right branch">Receipts</button> {% endcomment %}
+      </div>
+      <div class="col">
+        <span class="select_or">Or</span>
+      </div>
+      <div class="col-5">
+        <a href="{% url 'micro_admin:paymentslist' %}" class="pull-left branch">Payments</a>
+        {% comment %} <button type="button" class="pull-left branch">Payments</button> {% endcomment %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock stage %}
